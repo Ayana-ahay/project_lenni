@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lenni Art</title>
+    <link rel="stylesheet" href="styles/styles.css?ver=0">
+
+    <!-- шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400,500,600,700&family=Open+Sans:wght@400,500,600,700&display=swap" rel="stylesheet">
 </head>
-<body>
-    
+<body class="body">
+    <header class="page-header">
+        <a href="index.html" class="page-header__logo">Логотип</a>
+
+        <nav class="page-header__nav">
+            <a href="#" class="page-header__nav-link">Мероприятия</a>
+            <a href="#" class="page-header__nav-link">Блог</a>
+            <a href="#" class="page-header__nav-link">О нас</a>
+            <a href="#" class="page-header__nav-link">Контакты</a>
+        </nav>
+
+        <a href="#" class="btn page-header__user-btn"></a>
+    </header>
+
+    <main class="main">
+        <div class="home">
+            <!-- блок с большим логотипом - отдельный БЭМ-блок, тк может сущ-ть сам по себе-->
+            <!-- main-header является одновременно и блоком, и элементом более крупного блока -->
+             <header class="main-header home__main-header"></header>
+
+            <!-- блок с заказами -->
+             <sectiona class="offers home__offers"></sectiona>
+
+            <!-- раздел (блок) о нас -->
+             <section class="about home__about"></section>
+
+            <!-- раздел (длок) мероприятий -->
+             <section class="upcoming home__upcoming"></section>
+
+            <!-- листинг блога -->
+             <section class="listing home__listing"></section>
+
+            <!-- раздел с контактами  -->
+             <section class="contacts home__contacts"></section>
+
+            <!-- раздел со словами: Просто делайте, что нравится ... -->
+             <div class="doit home__doit"></div>
+        </div>
+    </main>
+
+    <footer class="page-footer"></footer>
 </body>
 </html>

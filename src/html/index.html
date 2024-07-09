@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    @@include('blocks/head.html')
+
+    <body class="body">
+        
+        @@include('blocks/page-header.html')
+
+        <main class="main">
+            <div class="home">
+                <!-- блок с большим логотипом - отдельный БЭМ-блок, тк может сущ-ть сам по себе-->
+                <!-- main-header является одновременно и блоком, и элементом более крупного блока -->
+                <header class="main-header home__main-header">
+                    <h1 class="main-header__title">Арт — пространство</h1>
+
+                    <!-- обертка -->
+                    <picture class="main-header__picture">
+                        <img src="src/assets/images/lenni.png" class="page-header__img" alt="img">
+                    </picture>
+                    <p class="main-header__text">
+                        Для людей, горящих сердцем и делом
+                        место для настоящего
+                    </p>
+                </header>
+
+                <!-- блок с заказами -->
+                <sectiona class="offers home__offers"></sectiona>
+
+                <!-- раздел (блок) о нас -->
+                <section class="about home__about"></section>
+
+                <!-- раздел (длок) мероприятий -->
+                <section class="upcoming home__upcoming"></section>
+
+                <!-- листинг блога -->
+                <section class="listing home__listing"></section>
+
+                <!-- раздел с контактами  -->
+                <section class="contacts home__contacts"></section>
+
+                <!-- раздел со словами: Просто делайте, что нравится ... -->
+                <div class="doit home__doit"></div>
+            </div>
+        </main>
+
+        @@include('blocks/page-footer.html')    
+    </body>
+</html>

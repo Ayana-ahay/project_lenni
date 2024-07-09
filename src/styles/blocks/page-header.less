@@ -1,0 +1,73 @@
+.page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 147px;
+    z-index: 100;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(222, 222, 222, 0.5);
+        @supports (backdrop-filter: blur(10px)) {
+            backdrop-filter: blur(10px);
+            background-color: rgba(222, 222, 222, 0.5);
+        }
+    }
+
+    &__container {
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding-left: 40px; /* отступы по второму макету 1380 */
+        padding-right: 40px; /* отступы включены в макс ширину */
+        max-width: 1414px; /* 1334 (внутр контейнер)+40+40 */
+        width: 100%;
+    }
+
+    &__logo {
+        display: inline-block;
+        width: 202px;
+        height: 147px;
+    }
+
+    &__logo-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__nav {
+        display: inline-block;
+    }
+
+    &__nav-link {
+        margin: 0 25px;
+        color: @black;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px; /*пространство между строками*/
+        text-decoration: none;
+    }
+
+    &__user-btn {
+        box-sizing: border-box; /* внутренние отступы и границы будут влючены во внутрь */
+        text-decoration: none;
+        padding: 15px 40px;
+        background-color: transparent;
+        border: 1px solid #1f1e1e;
+        font-size: 16px;
+        line-height: normal;
+        font-weight: 600;
+        color: #1f1e1e;
+    }
+    
+}
+

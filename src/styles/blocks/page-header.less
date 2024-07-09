@@ -21,16 +21,11 @@
     }
 
     &__container {
-        box-sizing: border-box;
+        .container();
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 auto;
-        padding-left: 40px; /* отступы по второму макету 1380 */
-        padding-right: 40px; /* отступы включены в макс ширину */
-        max-width: 1414px; /* 1334 (внутр контейнер)+40+40 */
-        width: 100%;
     }
 
     &__logo {
@@ -57,17 +52,17 @@
         text-decoration: none;
     }
 
-    &__user-btn {
-        box-sizing: border-box; /* внутренние отступы и границы будут влючены во внутрь */
-        text-decoration: none;
-        padding: 15px 40px;
-        background-color: transparent;
-        border: 1px solid #1f1e1e;
-        font-size: 16px;
-        line-height: normal;
-        font-weight: 600;
-        color: #1f1e1e;
-    }
+    // &__user-btn {
+    //     box-sizing: border-box; /* внутренние отступы и границы будут влючены во внутрь */
+    //     text-decoration: none;
+    //     padding: 15px 40px;
+    //     background-color: transparent;
+    //     border: 1px solid #1f1e1e;
+    //     font-size: 16px;
+    //     line-height: normal;
+    //     font-weight: 600;
+    //     color: #1f1e1e;
+    // }
     
 }
 

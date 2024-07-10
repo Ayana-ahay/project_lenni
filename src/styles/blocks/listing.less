@@ -1,0 +1,19 @@
+.listing {
+    .container;
+
+    display: flex;
+    flex-direction: column;
+
+    &__events-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -30px -120px; // чут чут подвинули 
+    }
+
+    &__event-card {
+        margin: 0 30px 120px; // чут чут подвинули 
+        /* (1/3) + расстояние между карточками 60px, два промежутка = 60 + 60 =120,
+        но карточек у нас три, следовательно, 120:3 = 40px */
+        width: calc(33.333%-40px);
+    }
+}

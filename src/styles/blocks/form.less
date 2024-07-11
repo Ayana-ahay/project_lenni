@@ -1,0 +1,44 @@
+.form {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        column-gap: 30px;
+        row-gap: 60px;
+
+        &--mb50 {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__group {
+        // 60 - расстояние между двумя блоками (между именем и фамилией)
+        // 30 - половина 60
+        width: calc(50% - 30px);
+    }
+
+    &__field {
+        width: 100%;
+        display: block;
+
+        &--w50 {
+            width: calc(50% - 30px);
+        }
+
+        &--w30 {
+            margin-bottom: 30px;
+        }
+    }
+
+
+    &__btn {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    &__check {
+        &--mb40 {
+            margin-bottom: 40px;
+        }
+    }
+}

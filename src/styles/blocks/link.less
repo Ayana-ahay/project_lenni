@@ -1,0 +1,29 @@
+.link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    height: 0; // с помощью этого мы избавились от большой ссылки, теперь кликабельны только слово и стрелка, а не еще пространство между ними
+    font-weight: 600;
+    font-size: 16px;
+    color: @black;
+    transition: color 0.2s;
+
+    &:hover {
+        color: @red;
+        // @media (hover: hover) {
+        //     color: @red;
+        // }
+    }
+    &:active {
+        color: @red;
+    }
+
+    &__icon {
+        margin-left: 20px;
+    }
+    // &__name, 
+    // &__icon {
+    //     cursor: pointer;
+    // }
+}

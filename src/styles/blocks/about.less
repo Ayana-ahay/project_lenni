@@ -1,0 +1,165 @@
+.about {
+
+    padding-bottom: 90px;
+
+    &__container {
+        .container();
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin: 0 0 50px;
+        font-weight: 700;
+        font-size: 44px;
+        color: @black;
+
+        &--w868 {
+            max-width: 868px;
+            width: 100%;
+        }
+
+        // &--mt {
+        //     margin-top: -128px;
+        // }
+
+        &--2 {
+            grid-area: title;
+        }
+
+        &--mb90 {
+            // в макете - 108, в уроке - 90
+            margin-bottom: 90px;
+        }
+    }
+
+    &__text {
+        align-self: flex-end;
+        margin: 0 0 100px;
+        max-width: 870px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 18px;
+        color: @black;
+
+        &--2 {
+            grid-area: text;
+            margin-left: auto;
+        }
+    }
+
+    &__picture {
+        grid-area: picture1;
+        position: relative;
+        display: block;
+        // ширина картинки: ширину картинки (870) делить 
+        // на ширину контейнера без отступов (1414 - 80 = 1334), 
+        // результат умножить на 100
+        // width: 65.217%;
+        // псевдоэлемент, который будет отвечать за процентный паддинг 
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            // процентый паддинг картинки - (577 : 870) * 100
+            padding-top: 66.322%;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        // изображение растягивается на всю область, задаваемую процентным паддингом
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__block2 {
+        display: grid;
+        // первая и вторая колонка - picture1, третья - picture2 и тд
+        grid-template-areas: 
+            "picture1 picture1 picture2"
+            "title title picture2"
+            "text text text";
+        gap: 60px;
+        grid-template-columns: 1fr 1fr 404px;
+    }
+
+    &__picture2 {
+        grid-area: picture2;
+        // margin-top: -280px;
+        align-self: flex-end;
+        position: relative;
+        display: block;
+        // max-width: 404px;
+        // width: 30.284%;
+        // псевдоэлемент, который будет отвечать за процентный паддинг 
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            // то же самое, что и наверху
+            padding-top: 122.029%;
+        }
+    }
+
+    &__block3 {
+        display: flex;
+        justify-content: space-between;
+        // расстояние между картинкой и текстом
+        align-items: flex-end;
+        gap: 60px;
+    }
+
+    &__picture3 {
+        position: relative;
+        box-sizing: border-box;
+        display: block;
+        max-width: 930px;
+        width: 100%;
+        padding: 18px 9px 0 49px;
+
+        // псевдоэлемент, который будет отвечать за красную подложку картинки
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            // высота картинки + подложка = 361+18 = 379
+            // высота подложки - 246
+            // (246 / 379) * 100 
+            height: 65%;
+            background-color: @red;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            // процентный паддинг: (379/930)*100
+            padding-top: 40.752%;
+        }
+    }
+
+    &__img2 {
+        position: absolute;
+        top: 18px;
+        left: 49px;
+        right: 9px;
+        bottom: 0;
+        // 49 + 9, для того, чтобы картинка не выбадала в мобильной версии
+        width: calc(100% - 58px);
+        object-fit: contain;
+    }
+
+    &__block3-wrapper {
+        max-width: 344px;
+        width: 100%;
+    }
+}

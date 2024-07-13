@@ -1,0 +1,75 @@
+.page-footer {
+
+    box-sizing: border-box;
+    padding: 60px 0 75px; // 60 - сверху до линии, 75 - снизу до конца страницы
+
+    &__border {
+        display: flex;
+        margin-bottom: 60px;
+        &::before, 
+        &::after {
+            content: "";
+            flex-grow: 1; // линии должны расстягиваться на все свободное пр-во
+            height: 2px;
+            width: 2px; // ширина растянется при помощи flex-grow
+        }
+
+        &::before {
+            // сумма mr и ml у after и befor = 100px, расстояние между двумя линиями
+            margin-right: 50px;
+            background: linear-gradient(270deg, #1c1b1b 0%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        &::after {
+            margin-left: 50px;
+            background: linear-gradient(135deg, #1c1b1b 0%, rgba(255, 255, 255, 0) 100%);
+        }
+    }
+
+    &__container {
+        .container();
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__nav {
+        margin-right: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        padding-left: 26px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: @red;
+        }
+    }
+
+    &__nav-link {
+        display: block;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        color: @black;
+        transition: color 0.2s;
+
+        &:hover {
+            @media (hover:hover) {
+                color: @red;
+            }
+        }
+
+        &:active {
+            color: @red;
+        }
+    }
+}

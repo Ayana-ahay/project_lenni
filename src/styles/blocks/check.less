@@ -1,37 +1,61 @@
 .check {
     box-sizing: border-box;
     position: relative;
-    padding-left: 40px; // размер самого значка - 24px + отсутп слева - 15px? округлим
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 24px;
+    padding-top: 2px;
+    padding-left: 24px;
+    color: @black;
     cursor: pointer;
-    display: block;
+
+    &--red {
+      color: @red;
+      .check__mark {
+        border-color: @red;
+      }
+      .check__input {
+        &:checked {
+          & ~ .check__mark {
+            background-color: @red;
+          }
+        }
+      }
+    }
+    &--disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
 
     &__input {
-        .is-hidden();
-        &:checked {
-            &~.check__mark {
-                background-color: @black;
+        .is-hidden;
 
-                &::after {
-                    content: ""; // чтобы псевдоэлемент появился
-                    display: block;
-                    position: absolute;
-                    left: 7px;
-                    top: 2px;
-                    width: 6px;
-                    height: 12px;
-                    border-bottom: 2px solid @white;
-                    border-right: 2px solid @white;
-                    transform: rotate(45deg);
-                }
+        &:checked {
+            & ~ .check__mark {
+              background-color: @black;
+              &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 7px;
+                top: 2px;
+                width: 6px;
+                height: 12px;
+                border-bottom: 2px solid @white;
+                border-right: 2px solid @white;
+                transform: rotate(45deg);
+              }
             }
-        }
+          }
     }
 
     &__mark {
         box-sizing: border-box;
+        display: block;
         position: absolute;
-        top: 0;
         left: 0;
+        top: 0;
         width: 24px;
         height: 24px;
         border: 1px solid @black;
@@ -40,7 +64,14 @@
     }
 
     &__label {
-        font-size: 14px;
-        color: @black;
+        margin-left: 15px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+
+        &--s {
+            font-size: 14px;
+            line-height: 19px;
+        }
     }
 }

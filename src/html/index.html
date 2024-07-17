@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- <html lang="ru" class="show-event-popup"> -->
 <html lang="en">
 
     @@include('blocks/head.html')
@@ -34,7 +35,7 @@
                 <section class="upcoming home__upcoming"></section>
 
                 <!-- листинг блога -->
-                <section class="listing home__listing"></section>
+                @@include('blocks/blog-listing.html', {"class": "home__listing"})
 
                 <!-- раздел с контактами  -->
                 @@include('blocks/contacts.html', {"class": "home__contacts"})

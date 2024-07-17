@@ -1,5 +1,6 @@
 .listing {
     .container;
+    display: flex;
 
     display: flex;
     flex-direction: column;
@@ -15,5 +16,11 @@
         /* (1/3) + расстояние между карточками 60px, два промежутка = 60 + 60 =120,
         но карточек у нас три, следовательно, 120:3 = 40px */
         width: calc(33.333%-40px);
+    }
+
+    &__link {
+        align-self: end;
+        padding: 15px 0px 15px 40px;
+        margin-top: 70px;
     }
 }

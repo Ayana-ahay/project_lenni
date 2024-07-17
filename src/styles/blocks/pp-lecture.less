@@ -1,0 +1,92 @@
+.pp {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    // 90 - расстояние между формой и верхней границей экрана
+    // чтобы внутренний контейнер не прилипал к границам экрана
+    padding: 90px 50px 50px;
+    // сделано для случая, если экран маленький, поэтому нужен скролл
+    overflow-y: auto;
+    z-index: 110;
+    background-color: @gray;
+    // display: none; - для интерактива
+    @supports (backdrop-filter: blur(25px)) {
+        background-color: @black_40;
+        backdrop-filter: blur(25px);
+    }
+
+    &__container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 70px 40px 40px;
+        max-width: 1210px;
+        background-color: @gray;
+        background-image: url(../../assets/images/noise.png);
+        // картинка повторяется до тех пор, пока она влезает, дублируется на весь элемент
+        background-repeat: repeat;
+        background-position: 0 0;
+        background-size: auto;
+    }
+
+    &__title {
+        margin: -110px 0 70px;
+        box-sizing: border-box;
+        padding: 10px 84px;
+        max-width: 595px;
+        background-color: @black;
+        text-transform: uppercase; // заглавные буквы
+        font-family: @font2;
+        font-weight: 400;
+        font-size: 22px;
+        // line-height: 30px;
+        line-height: 1.36;
+        // letter-spacing: 0.44em; (в уроке) расстояние между буквами слова
+        letter-spacing: 0.02em;
+        color: @white;
+    }
+
+    &__sticky-close {
+        position: sticky;
+        align-self: flex-end;
+        top: 0;
+        width: 0;
+    }
+
+    &__sticky-btn {
+        position: absolute;
+        right: -70px;
+        top: -100px;
+        //right: 0;
+        //top: 0; //?
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border: none;
+        outline: none;
+        border-radius: 50px;
+        background-color: @black;
+        color: @white;
+        transition: background-color 0.2s;
+        &:hover {
+            // наведение будет работать исключительно при наведении мыши курсором
+            @media (hover:hover) {
+                background-color: @red_dark;
+            }
+        }
+    }
+
+    &__form {
+        margin: auto;
+        max-width: 870px;
+
+    }
+}

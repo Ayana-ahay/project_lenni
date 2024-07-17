@@ -1,24 +1,19 @@
 .radio {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-
-    &__item {
+    &__label {
+        display: block;
+        margin-bottom: 9px;
         box-sizing: border-box;
+        padding-left: 23px; // кружочек
         // для того, чтобы это был родительский эл-т, 
         // и по отношению к нему наш кружочек (radio-mark) позиционировался
         position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 15px;
         min-height: 23px;
-        padding-left: 23px;
-        color: @black;
         cursor: pointer;
 
         &:last-child {
-            margin-bottom: 0;
+            margin-bottom: 0; // чтобы у последнего эл-та не было отступа
         }
     }
 
@@ -27,32 +22,35 @@
 
         &:checked {
             &~.radio__mark {
-              background-color: @black;
+                background-color: @black;
             }
         }
     }
 
-    // Создаем «поддельную» радиокнопку
     &__mark {
         box-sizing: border-box;
-        display: block;
         position: absolute;
         left: 0;
         top: 0;
         width: 23px;
         height: 23px;
+        border-radius: 50px;
         border: 2px solid @black;
-        border-radius: 50%;
         padding: 3px;
-        background-clip: content-box; // окрашивается только внутреннее пр-во без внутр отступов
+        background-clip: content-box;
         background-color: transparent;
         transition: background-color 0.2s;
+        
     }
 
-    &__label {
-        margin-left: 20px;
+    &__name {
+        // поскольку это спан и мы хотим сделать отступы, то делаем дисплей блок
+        display: block;
+        margin-left: 23px;
+        font-family: @font1;
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
+        color: @black;
     }
 }

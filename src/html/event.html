@@ -7,12 +7,14 @@
             <!-- Здесь будут хлебные крошки -->
             <article class="event">
                 <!-- Здесь пропущенное содержимое страницы -->
-                <form class="reserve event__reserve">
-                    <div class="reserve__checks"> Чекбоксы </div>
-                    <div class="reserve__scheme"> Схема столов </div>
-                    <div class="reserve__order"> Оформление заказа </div>
-                    <div class="reserve__legend"> Легенда </div>
-                </form>
+
+                <div class="event__container">
+                    <div class="event__content content"></div>
+
+                    <!-- prettier-ignore -->
+                    @@include('blocks/reserve.html', {"class": "event__reserve"})
+                </div>
+
             </article>
         </main>
 

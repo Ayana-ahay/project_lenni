@@ -1,6 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="home" viewBox="0 0 24 24"><g fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow" viewBox="0 0 92 62"><g fill="none">
+    <path d="M40 52.213a29.836 29.836 0 0 0 15.297 8.21 29.76 29.76 0 0 0 17.26-1.707 29.902 29.902 0 0 0 13.408-11.049A30.089 30.089 0 0 0 91 31a30.089 30.089 0 0 0-5.035-16.667 29.902 29.902 0 0 0-13.407-11.05 29.76 29.76 0 0 0-17.262-1.707A29.837 29.837 0 0 0 40 9.786" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <path d="M5 31h60M58 24l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g></symbol><symbol id="home" viewBox="0 0 24 24"><g fill="none">
     <path d="m20 8-6-5.26a3 3 0 0 0-4 0L4 8a3 3 0 0 0-1 2.26V19a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-8.75A3 3 0 0 0 20 8Zm-6 12h-4v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5Zm5-1a1 1 0 0 1-1 1h-2v-5a3 3 0 0 0-3-3h-2a3 3 0 0 0-3 3v5H6a1 1 0 0 1-1-1v-8.75a1 1 0 0 1 .34-.75l6-5.25a1 1 0 0 1 1.32 0l6 5.25a1 1 0 0 1 .34.75V19Z" fill="currentColor"/>
     <path d="M19 19a1 1 0 0 1-1 1h-2v-5a3 3 0 0 0-3-3h-2a3 3 0 0 0-3 3v5H6a1 1 0 0 1-1-1v-8.75a1 1 0 0 1 .34-.75l6-5.25a1 1 0 0 1 1.32 0l6 5.25a1 1 0 0 1 .34.75V19Z" fill="currentColor"/>
+</g></symbol><symbol id="information"><g fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11Zm-1-6.6a1 1 0 0 1 1-1h.011a1 1 0 1 1 0 2H12a1 1 0 0 1-1-1Zm2-8.8a1 1 0 1 0-2 0V12a1 1 0 1 0 2 0V7.6Z" fill="#BC3324"/>
 </g></symbol><symbol id="link" viewBox="0 0 92 62"><g fill="none">
     <path d="M40 52.213a29.836 29.836 0 0 0 15.297 8.21 29.76 29.76 0 0 0 17.26-1.707 29.902 29.902 0 0 0 13.408-11.049A30.089 30.089 0 0 0 91 31a30.089 30.089 0 0 0-5.035-16.667 29.902 29.902 0 0 0-13.407-11.05 29.76 29.76 0 0 0-17.262-1.707A29.837 29.837 0 0 0 40 9.786" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     <path d="M5 31h60M58 24l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

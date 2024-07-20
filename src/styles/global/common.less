@@ -15,7 +15,7 @@ body {
     background-position: 0 0, 0 0;
     background-size: auto, 100% auto;
     background-repeat: repeat, repeat-y;
-    color: #1F1E1E;
+    color: @black;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -23,6 +23,14 @@ body {
     line-height: 1.375;
     overflow-x: hidden;
     padding-top: 147px;
+
+    @media @bw1660 {
+      padding-top: 111px;
+  }
+
+  @media @bw768 {
+      padding-top: 70px;
+  }
 }
 
 .main {
@@ -34,7 +42,7 @@ body {
 }
 
 a {
-  color: #1F1E1E;
+  color: @black;
   outline: none;
 }
 

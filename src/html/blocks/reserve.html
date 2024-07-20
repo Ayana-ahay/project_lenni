@@ -1,8 +1,7 @@
 <form class="reserve @@class">
-    <div class="reserve__checks">
-      <h4 class="reserve__section-title">
-        Забронировать столик
-      </h4>
+  <!-- Элемент формы - чеки -->
+  <div class="reserve__checks">
+      <h4 class="reserve__section-title reserve__section-title--mb30">Забронировать столик</h4>
 
       <label class="reserve__check check check--red">
         <input
@@ -11,7 +10,7 @@
           class="check__input"
         />
         <span class="check__mark"></span>
-        <span class="check__label">1 стол</span>
+        <span class="check__label check__label">1 стол</span>
       </label>
 
       <label class="reserve__check check">
@@ -114,19 +113,53 @@
         <span class="check__mark"></span>
         <span class="check__label">11 стол</span>
       </label>
-    </div>
-     
-    <!-- Прочие элементы формы -->
+  </div>
 
-    <div class="reserve__scheme">
-      <div class="reserve__scheme">
-        <div class="reserve__scheme-container">
-          <h4 class="reserve__scheme-title">Сцена</h4>
-                      
-          <div class="reserve__scheme-wrapper">
-            <div class="reserve__scheme-wrapper">@@include('scene.html')</div>
-          </div>
-        </div>
+  <!-- Элемент формы - схема -->
+  <div class="reserve__scheme">
+    <div class="reserve__scheme-container">
+      <h4 class="reserve__scheme-title">Сцена</h4>
+                  
+      <div class="reserve__scheme-wrapper">
+        @@include('scene.html')
       </div>
     </div>
-  </form>
+  </div>
+
+  <!-- Элемент формы - ордер -->
+  <div class="reserve__order">
+      <h4 class="reserve__section-title">Ваши пригласительные билеты</h4>
+      <div class="reserve__tickets-list">
+        <div class="reserve__tickets">
+          <div class="reserve__qty" data-caption="шт." data-price="1400">0</div>
+          <div class="reserve__sum" data-currency="₽">0</div>
+        </div>
+        <div class="reserve__tickets">
+          <div class="reserve__qty" data-caption="шт." data-price="1250">0</div>
+          <div class="reserve__sum" data-currency="₽">0</div>
+        </div>
+      </div>
+      <div class="reserve__total" data-caption="Сумма" data-currency="₽">0</div>
+      <button type="submit" class="btn btn--red reserve__submit">
+        Купить билеты
+      </button>
+  </div>
+
+  <!-- Элемент формы - чеки -->
+  <div class="reserve__legend">
+    <div class="reserve__price">
+      <h4 class="reserve__section-title">Стоимость пригласительного билета</h4>
+      <div class="reserve__price-list">
+        <div class="reserve__price-item reserve__price-item--red" data-caption=" ₽ | 1 персона">1400</div>
+        <div class="reserve__price-item" data-caption=" ₽ | 1 персона">1250</div>
+      </div>
+    </div>
+
+    <div class="reserve__notation">
+      <h4 class="reserve__section-title">Примечание</h4>
+      <div class="reserve__note reserve__note--free">доступные места</div>
+      <div class="reserve__note reserve__note--booked">забронировано</div>
+    </div>
+  </div>
+
+</form>

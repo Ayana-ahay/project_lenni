@@ -5,8 +5,51 @@
         @@include('blocks/page-header.html')
         <main class="main">
             <!-- Здесь будут хлебные крошки -->
+            @@include('blocks/breadcrumbs.html')
+
             <article class="event">
-                <!-- Здесь пропущенное содержимое страницы -->
+                <header class="event__header">
+                    <h1 class="event__title title"> Вечер | The Best of Sade</h1>
+                    <div class="event__about">
+                        <div class="event__info">
+                            <time datetime="2022-12-16T20:00" class="event__time">
+                                16/12/2022
+                            </time>
+
+                            <div class="event__info-text">
+                                Кафе «Птичка» 
+                            </div>
+                        </div>
+
+                        <picture class="event__picture">
+                            <source
+                                media="(max-width: 1169px)"
+                                type="image/webp"
+                                srcset="assets/images/event/woman_mobile.webp"
+                            />
+                            <source
+                                media="(max-width: 1169px)"
+                                srcset="assets/images/event/woman_mobile.jpg"
+                            />
+            
+                            <source
+                                type="image/webp"
+                                srcset="assets/images/event/woman_main.webp"
+                            />
+                            <img class="event__image" src="assets/images/event/woman_1.jpg" alt="The Best of Sade">
+                        </picture>
+
+                        <div class="event__info">
+                            <span class="event__time" data-caption="начало">
+                                20.00
+                            </span>
+
+                            <div class="event__info-text">
+                                Ленина 10 | 2 этаж
+                            </div>
+                        </div>
+                    </div>
+                </header>
 
                 <div class="event__container">
                     <div class="event__content content"></div>

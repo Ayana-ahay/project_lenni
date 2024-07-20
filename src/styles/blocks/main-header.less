@@ -1,0 +1,56 @@
+.main-header {
+
+    margin-bottom: 100px;
+    
+    &__title,
+    &__text {
+        /* нет контейнера у заголовка и текста, поэтому добавляем паддинги */
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Lora", serif;
+        font-weight: 400;
+        font-size: 45px;
+        line-height: normal;
+        color: #1f1e1e;
+    }
+
+    &__title {
+        margin: 0 0 70px;
+    }
+
+    &__text {
+        margin: 0 auto;
+        max-width: 948px; /*(990)*/
+        width: 100%;
+    }
+
+    &__picture {
+        display: block;
+        margin-bottom: 70px;
+        position: relative;
+        width: 100%;
+    }
+    
+    .main-header__picture::before {
+        content: "";
+        display: block;
+        width: 100%;
+    
+        /* процентный паддинг, для того, чтобы картинка равномерно изменялась
+        высоту делим на ширину (325:1920) и умножаем на 100%, пользоваться до 3го значения*/
+        padding-top: 16.927%;
+    }
+    
+    .page-header__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    
+        /* для того, чтобы изображение все помещалось */
+        object-fit: contain;
+    }
+}

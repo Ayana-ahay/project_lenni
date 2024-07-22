@@ -6,12 +6,52 @@
     &__wrapper {
         display: flex;
         justify-content: space-between;
+
+        @media @bw1160 {
+            flex-direction: column;
+            // flex-wrap: wrap;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        @media @bw1340 {
+            margin-bottom: 125px;
+        }
     }
 
     &__items {
         display: flex;
         flex-direction: column;
-        gap: 67px;// расстояние между блоками, где изображение с текстом
-        margin-right: 30px;
+        justify-content: space-between;
+        padding: 15px 0;
+        //gap: 67px;// расстояние между блоками, где изображение с текстом
+        // margin-right: 30px;
+        
+        @media @bw1160 {
+            flex-direction: row;
+            order: 1;
+            padding: 0;
+            width: 100%;
+        }
+
+        @media @bw650 {
+            flex-direction: column;
+        }
+    }
+
+    &__map {
+        position: relative;
+        display: block;
+        width: 752px;
+
+        @media @bw1160 {
+            width: 100%;
+            margin-bottom: 100px;
+        }
+
+        @media @bw650 {
+            margin-bottom: 60px;
+        }
     }
 }

@@ -1,9 +1,44 @@
 .home {
     padding: 100px 0; // расстояние от шапки до блока home, конца блока home до футера
-    
+
+    @media @bw1020 {
+        padding: 80px 0;
+    }
+
+    &__main-header {
+        margin-bottom: 100px;
+
+        @media @bw1020 {
+            margin-bottom: 73px;
+        }
+
+        @media @bw650 {
+            margin-bottom: 40px;
+        }
+    }
+
     &__listing {
         margin-bottom: 95px; // расстоние от конца блока listing до блока Контакты
     }
 
+    &__offers {
+        margin-bottom: 200px;
+
+        @media @bw1020 {
+            margin-bottom: 130px;
+        }
+
+        @media @bw650 {
+            margin-bottom: 100px;
+        }
+    }
+
+    &__about {
+        margin-bottom: 100px;
+
+        @media @bw1020 {
+            margin-bottom: 70px;
+        }
+    }
     
 }

@@ -3,6 +3,26 @@
     align-items: center;
     gap: 54px; // расстояние м/у текстом и картинкой
 
+    @media @bw1160 {
+        flex-direction: column;
+        min-width: 194.17px;
+        margin-bottom: 40px;
+        gap: 30px;
+        //align-items: start;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @media @bw650 {
+        flex-direction: row;
+        align-items: start;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
     &__img {
         display: flex;
         justify-content: center; // для того, чтобы иконка была внутри квадрата
@@ -12,6 +32,11 @@
         height: 110px;
         background-color: @black;
         color: @red;
+
+        @media @bw650 {
+            width: 65px;
+            height: 65px;
+        }
     }
 
     &__title {
@@ -20,6 +45,18 @@
         font-size: 20px;
         line-height: normal;
         color: @black;
+
+        @media @bw1160 {
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        @media @bw650 {
+            font-size: 14px;
+            font-weight: 600;
+            text-align: left;
+        }
     }
 
     &__info {
@@ -29,6 +66,16 @@
         font-size: 16px;
         line-height: normal;
         color: @black;
+
+        @media @bw1160 {
+            text-align: center;
+        }
+
+        @media @bw650 {
+            margin: 0;
+            font-size: 14px;
+            text-align: left;
+        }
 
         &[href] {
             text-decoration: none;

@@ -1,7 +1,4 @@
 .about {
-
-    padding-bottom: 90px;
-
     &__container {
         .container();
     }
@@ -27,12 +24,45 @@
         // }
 
         &--2 {
+            position: relative;
             grid-area: title;
+            top: 37px;
+
+            @media @bw650 {
+                top: 0;
+                margin-bottom: 60px;
+            }
+
+            @media @bw1020 {
+                margin-bottom: 10px;
+            }
+
+            @media @bw660 {
+                top: 0;
+                margin-bottom: 10px;
+            }
+
+            @media @bw650 {
+                top: 0;
+                margin-bottom: 30px;
+            }
         }
 
-        &--mb90 {
-            // в макете - 108, в уроке - 90
-            margin-bottom: 90px;
+        @media @bw1020 {
+            //max-width: 420px;
+            //width: 100%;
+            font-size: 26px;
+        }
+
+        @media @bw768 {
+            font-size: 22px;
+        }
+
+        @media @bw600 {
+            margin-bottom: 30px;
+            //max-width: 280px;
+            //width: 100%;
+            font-size: 18px;
         }
     }
 
@@ -45,9 +75,36 @@
         font-size: 18px;
         color: @black;
 
+        @media @bw1020 {
+            margin-left: auto;
+            font-size: 16px;
+            max-width: 640px;
+            margin: 0 0 80px;
+        }
+
+        // @media @bw600 {
+        //     margin: 0 0 60px;
+        // }
+
         &--2 {
             grid-area: text;
             margin-left: auto;
+            @media @bw650 {
+                margin-bottom: 60px;
+            }
+        }
+
+        &--mb90 {
+            // в макете - 108, в уроке - 90
+            margin-bottom: 90px;
+
+            @media @bw1020 {
+                max-width: 280px;
+            }
+
+            @media @bw650 {
+                max-width: fit-content;
+            }
         }
     }
 
@@ -66,6 +123,14 @@
             width: 100%;
             // процентый паддинг картинки - (577 : 870) * 100
             padding-top: 66.322%;
+        }
+
+        @media @bw660 {
+            margin-bottom: 60px;
+        }
+        
+        @media @bw650 {
+            margin-bottom: 60px;
         }
     }
 
@@ -88,6 +153,27 @@
             "text text text";
         gap: 60px;
         grid-template-columns: 1fr 1fr 404px;
+
+        @media @bw1020 {
+            grid-template-areas: 
+                "picture1 picture1 picture1"
+                "title title picture2"
+                "text text picture2";
+            gap: 50px 27px;
+            grid-template-columns: 1fr 1fr 260px;
+            margin-bottom: 50px;
+        }
+
+        @media @bw660 {
+            grid-template-areas: 
+                "picture1 picture1"
+                "title title"
+                "text text"
+                "none picture2";
+            gap: 10px;
+            grid-template-columns: calc(100% - 81.7796%) 81.7796%;
+            margin-bottom: 30px;
+        }
     }
 
     &__picture2 {
@@ -102,7 +188,7 @@
         &::before {
             content: "";
             display: block;
-            width: 100%;
+            //width: 100%;
             // то же самое, что и наверху
             padding-top: 122.029%;
         }
@@ -112,8 +198,14 @@
         display: flex;
         justify-content: space-between;
         // расстояние между картинкой и текстом
-        align-items: flex-end;
-        gap: 60px;
+        // align-items: flex-end;
+        // gap: 60px;
+
+        @media @bw1020 {
+            flex-direction: column;
+            justify-content: center;
+            // gap: 20px;
+        }
     }
 
     &__picture3 {
@@ -145,6 +237,14 @@
             // процентный паддинг: (379/930)*100
             padding-top: 40.752%;
         }
+
+        @media @bw1020 {
+            margin-bottom: 80px;
+        }
+
+        @media @bw650 {
+            margin-bottom: 60px;
+        }
     }
 
     &__img2 {
@@ -156,10 +256,61 @@
         // 49 + 9, для того, чтобы картинка не выбадала в мобильной версии
         width: calc(100% - 58px);
         object-fit: contain;
+
+        @media @bw1020 {
+            top: 14px;
+            left: 29px;
+            right: 7px;
+            bottom: 0;
+            width: calc(100% - 36px);
+        }
+
+        @media @bw650 {
+            top: 5px;
+            left: 11px;
+            right: 2px;
+            bottom: 0;
+            width: calc(100% - 13px);
+        }
     }
 
     &__block3-wrapper {
+        // max-width: 344px;
+        // width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-left: 60px;
         max-width: 344px;
         width: 100%;
+
+        margin-top: 20px;
+
+        @media @bw1660 {
+            margin-top: 0;
+            margin-left: 40px;
+        }
+
+        @media @bw1020 {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 0;
+            max-width: none;
+        }
+
+        @media @bw650 {
+            height: auto;
+        }
+
+        @media @bw650 {
+            flex-direction: column;
+        }
+    }
+
+    &__link {
+        @media @bw1020 {
+            padding-top: 20px;
+        }
     }
 }

@@ -1,10 +1,10 @@
-<div class="pp" id="eventPP">
+<div class="pp" id="js-eventPP">
     <div class="pp__wrapper">
         <!-- обертка для кнопки btn-close -->
         <div class="pp__sticky-close">
-            <button class="pp__x-btn x-btn">
-                <svg class="x-btn__icon" width="24" height="24">
-                    <use xlink:href="assets/icons/symbols.svg#x"></use>
+            <button class="pp__x-btn x-btn js-ppCloseBtn">
+                <svg class="x-btn__icon" width="12" height="12">
+                  <use xlink:href="assets/icons/symbols.svg#x"></use>
                 </svg>
             </button>
         </div>
@@ -70,7 +70,7 @@
                         <div class="form__field field">
                             <h6 class="field__title">Планируемое количество посетителей:</h6>
                             <select name="amount" 
-                                    class="field__select"
+                                    class="field__select js-selectric"
                                     placeholder="Выберите планируемое число посетителей">
                                 <option value="20"> до 20 человек</option>
                                 <option value="100"> от 20 до 100 человек</option>
@@ -80,22 +80,38 @@
                         </div>
 
                         <!-- раздел - дата проведения -->
-                        <div class="form__field field">
+                        <div class="form__field field js-dateField">
                             <h6 class="field__title">Дата проведения:</h6>
 
-                            <div class="field__date-inputs">
-                                <input class="field__date-input"
-                                       type="text"
-                                       placeholder="ДД" />
-
-                                <input class="field__date-input"
-                                       type="text"
-                                       placeholder="ММ" />
-
-                                <input class="field__date-input field__date-input--year"
-                                       type="text"
-                                       placeholder="ГГГГ" />
-                            </div>
+                            <div class="field__date">
+                                <div class="field__date-inputs">
+                                  <input
+                                    class="field__date-input js-dateDay"
+                                    type="text"
+                                    placeholder="ДД"
+                                    readonly
+                                  />
+                                  <input
+                                    class="field__date-input js-dateMonth"
+                                    type="text"
+                                    placeholder="ММ"
+                                    readonly
+                                  />
+                                  <input
+                                    class="field__date-input field__date-input--year js-dateYear"
+                                    type="text"
+                                    placeholder="ГГГГ"
+                                    readonly
+                                  />
+                                </div>
+                                <input
+                                  class="field__date-picker js-dateInput"
+                                  type="text"
+                                  name="date"
+                                  readonly
+                                  required
+                                />
+                              </div>
                         </div>
                     </div>
                 </div>
@@ -124,7 +140,7 @@
 
                         <label class="field form__field form__field--w50">
                             <span class="field__label">Телефон*</span>
-                            <input class="field__input" 
+                            <input class="field__input js-mobileMask" 
                                    type="tel"
                                    placeholder="Телефон"
                                    name="phone"
@@ -173,7 +189,7 @@
                         Отправить
                     </button>
 
-                    <button type="button" class="form__close-btn">
+                    <button type="button" class="form__close-btn js-ppCloseBtn">
                         Закрыть
                     </button>
                 </div>

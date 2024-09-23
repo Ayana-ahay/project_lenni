@@ -32,7 +32,7 @@
                 @@include('blocks/about.html', {"class": "home__about"})
 
                 <!-- раздел (длок) мероприятий -->
-                <section class="upcoming home__upcoming"></section>
+                @@include('blocks/upcoming.html', {"class": "home__upcoming"})
 
                 <!-- листинг блога -->
                 @@include('blocks/blog-listing.html', {"class": "home__listing"})
@@ -41,12 +41,29 @@
                 @@include('blocks/contacts.html', {"class": "home__contacts"})
 
                 <!-- раздел со словами: Просто делайте, что нравится ... -->
-                <div class="doit home__doit"></div>
+                <div class="doit home__doit">
+                    <div class="doit__container">
+                        <div class="doit__text">
+                            <span class="doit__text1">Просто делайте,</span>
+                            <span class="doit__text2">что нравится,</span>
+                            <span class="doit__text3">а мы вам поможем</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
         @@include('blocks/page-footer.html')
 
         @@include('blocks/event-pp.html')
+
+        <script src="scripts/jquery-3.7.1.min.js"></script>
+        <script src="scripts/jquery.selectric.min.js"></script>
+        <script src="scripts/jquery.mask.min.js"></script>
+        <script src="scripts/air-datepicker.js"></script>
+
+        <script src="scripts/swiper.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+        <script src="scripts/main.min.js"></script>
     </body>
 </html>

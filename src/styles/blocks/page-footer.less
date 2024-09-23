@@ -3,6 +3,18 @@
     box-sizing: border-box;
     padding: 60px 0 75px; // 60 - сверху до линии, 75 - снизу до конца страницы
 
+    @media @bw1340 {
+        padding-bottom: 65px;
+    }
+
+    @media @bw768 {
+        padding-bottom: 50px;
+    }
+
+    @media @bw500{
+        margin-top:8px;
+    }
+
     &__border {
         display: flex;
         margin-bottom: 60px;
@@ -33,6 +45,11 @@
     &__wrapper {
         display: flex;
         justify-content: space-between;
+
+        @media @bw768 {
+            flex-direction: column;
+        }
+    
     }
 
     &__nav {
@@ -51,6 +68,10 @@
             width: 4px;
             height: 100%;
             background-color: @red;
+        }
+
+        @media @bw768 {
+            margin-bottom: 60px;
         }
     }
 
